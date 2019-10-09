@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Item extends Component {
+class ComingS extends Component {
   state = {
     currentTab: 1
   };
@@ -10,15 +10,15 @@ class Item extends Component {
     this.setState({ currentTab: tabIndex });
   }
 
-  renderTabPanel(item) {
+  renderTabPanel(coming) {
     let { currentTab } = this.state;
     switch (currentTab) {
       case 1:
-        return <div>{item.description}</div>;
+        return <div>{coming.description}</div>;
       case 2:
         return <div>{"chef on holiday.."}</div>;
       case 3:
-        return <div>{item.video}</div>;
+        return <div>{coming.video}</div>;
       case 4:
         return <div>{"chef on holiday.."}</div>;
       default:
@@ -27,21 +27,21 @@ class Item extends Component {
   }
 
   render() {
-    let { item } = this.props;
+    let { coming } = this.props;
     let { currentTab } = this.state;
     return (
       <div>
         <div className="row">
           <div className="col-3 col-sm-3 col-md-3">
-            <img className="img-fluid" alt={item.name} src={item.imgPath} />
+            <img className="img-fluid" alt={coming.lang} src={coming.imgPath} />
           </div>
           <div className="col-9 col-sm-9 col-md-9">
             <div>
-              <h3>{item.name}</h3> <br />
-              <h6 style={{ color: "gray" }}>{item.lang} </h6>
-              <h6 style={{ color: "gray" }}>{item.age} </h6>
-              <h6 style={{ color: "gray" }}>{item.type} </h6>
-              <h6 style={{ color: "gray" }}>{item.hours} </h6>
+              <h3>{coming.name}</h3> <br />
+              <h6 style={{ color: "gray" }}>{coming.lang} </h6>
+              <h6 style={{ color: "gray" }}>{coming.age} </h6>
+              <h6 style={{ color: "gray" }}>{coming.type} </h6>
+              <h6 style={{ color: "gray" }}>{coming.hours} </h6>
               <ul className="nav nav-tabs">
                 <li className="nav-item">
                   <a
@@ -88,7 +88,7 @@ class Item extends Component {
                   </a>
                 </li>
               </ul>
-              {this.renderTabPanel(item)}
+              {this.renderTabPanel(coming)}
             </div>
           </div>
         </div>
@@ -97,4 +97,4 @@ class Item extends Component {
   }
 }
 
-export default Item;
+export default ComingS;
