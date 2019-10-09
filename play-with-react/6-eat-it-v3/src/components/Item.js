@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Ticket from "./Ticket";
 class Item extends Component {
   state = {
     currentTab: 1
@@ -16,11 +16,11 @@ class Item extends Component {
       case 1:
         return <div>{item.description}</div>;
       case 2:
-        return <div>{"chef on holiday.."}</div>;
+        return <div>{item.date}</div>;
       case 3:
         return <div>{item.video}</div>;
       case 4:
-        return <div>{"chef on holiday.."}</div>;
+        return <div> {<Ticket item={item.price} />}</div>;
       default:
         return null;
     }
@@ -76,6 +76,7 @@ class Item extends Component {
                     Video
                   </a>
                 </li>
+
                 <li className="nav-item">
                   <a
                     onClick={e => this.changeTab(4, e)}
@@ -84,7 +85,7 @@ class Item extends Component {
                     }
                     href="/"
                   >
-                    Tickect
+                    Ticket
                   </a>
                 </li>
               </ul>

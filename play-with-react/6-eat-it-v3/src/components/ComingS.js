@@ -16,11 +16,9 @@ class ComingS extends Component {
       case 1:
         return <div>{coming.description}</div>;
       case 2:
-        return <div>{"chef on holiday.."}</div>;
+        return <div>{"Tickets will be available on 20 Oct"}</div>;
       case 3:
         return <div>{coming.video}</div>;
-      case 4:
-        return <div>{"chef on holiday.."}</div>;
       default:
         return null;
     }
@@ -74,17 +72,6 @@ class ComingS extends Component {
                     href="/"
                   >
                     Video
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    onClick={e => this.changeTab(4, e)}
-                    className={
-                      currentTab === 4 ? "nav-link active" : "nav-link"
-                    }
-                    href="/"
-                  >
-                    Tickect
                   </a>
                 </li>
               </ul>
